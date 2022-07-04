@@ -25,11 +25,11 @@ import qualified Data.Text                  as T
 
 siteMeta :: SiteMeta
 siteMeta =
-    SiteMeta { siteAuthor = "Me"
+    SiteMeta { siteAuthor = "Casper Thule"
              , baseUrl = "https://example.com"
-             , siteTitle = "My Slick Site"
-             , twitterHandle = Just "myslickhandle"
-             , githubUser = Just "myslickgithubuser"
+             , siteTitle = "Blog"
+             , twitterHandle = Just "CThuleHansen"
+             , githubUser = Just "CThuleHansen"
              }
 
 outputFolder :: FilePath
