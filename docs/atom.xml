@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title>Blog</title>
-    <link href="https://cthulehansen.github.io//atom.xml" rel="self" type="application/rss+xml" />
-  <updated>2022-07-14T20:11:SZ</updated>
+    <link href="/blog/atom.xml" rel="self" type="application/rss+xml" />
+  <updated>2022-07-14T20:16:SZ</updated>
   <author>
       <name>Casper Thule</name>
   </author>
-  <id>https://cthulehansen.github.io//</id>
+  <id>/blog/</id>
 
   <entry>
       <title>Sample Post</title>
-      <link href="https://cthulehansen.github.io/posts/sample-post.html"/>
-      <id>https://cthulehansen.github.io/posts/sample-post.html</id>
+      <link href="/blogposts/sample-post.html"/>
+      <id>/blogposts/sample-post.html</id>
       <updated>2019-01-01T00:00:SZ</updated>
       <category term="slick"/>
       <category term="site"/>
