@@ -1,22 +1,62 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-    <title>Blog</title>
-    <link href="https://cthulehansen.github.io/blog/atom.xml" rel="self" type="application/rss+xml" />
-  <updated>2022-09-26T19:13:SZ</updated>
-  <author>
-      <name>Casper Thule</name>
-  </author>
-  <id>https://cthulehansen.github.io/blog/</id>
+<!DOCTYPE html>
+<html lang="en">
+<head profile="http://www.w3.org/2005/10/profile">
+    <meta charset="UTF-8">
+    <meta name="description" content="Blog">
+    <meta name="author" content="Casper Thule">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@CThuleHansen">
+<meta name="twitter:creator" content="@CThuleHansen">
+<meta name="twitter:title" content="Learn Haskell by Building a Blog Generator">
+    <meta name="twitter:description" content="My impression of the book Learn Haskell by Building a Blog Generator">
+        <title>Learn Haskell by Building a Blog Generator</title>
+    <link rel="stylesheet" href="/blog/css/style.css">
+    <link rel="stylesheet" href="/blog/css/syntax.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a id="beacon" href="/">
+                <div id="home-text"> HOME </div>
+            </a>
+        </nav>
+    
+        <div class="right-sidebar">
+            <a class="ext-link" href="https://github.com/CThuleHansen">
+            <img src="/blog/images/github-logo.png" alt="Github Profile"/>
+        </a>
 
-  <entry>
-      <title>Learn Haskell by Building a Blog Generator</title>
-      <link href="https://cthulehansen.github.io/blogposts/bloggen.html"/>
-      <id>https://cthulehansen.github.io/blogposts/bloggen.html</id>
-      <updated>2022-09-26T00:00:SZ</updated>
-      <category term="Haskell"/>
-      <category term="Book"/>
-      <summary>My impression of the book Learn Haskell by Building a Blog Generator</summary>
-      <content type="html"><![CDATA[<h1 id="learn-haskell-by-building-a-blog-generator">Learn Haskell by Building a Blog Generator</h1>
+            <a class="ext-link" href="https://twitter.com/CThuleHansen">
+            <img src="/blog/images/twitter-logo.png" alt="Twitter Profile"/>
+        </a>
+    <div id="theme-button">DAY</div>
+        </div>
+    </header>
+
+<div id="page">
+    <div class="wrapper">
+        <div class="masthead">
+            <span class="title">
+                Learn Haskell by Building a Blog Generator
+            </span>
+            <br>
+
+            <br>
+            <span class="byline">by Casper Thule</span>
+            <br>
+            <span class="date">Sep 26, 2022</span>
+            <br>
+            <div class="metadata">
+            </div>
+            <div class="tags">
+              <span class="tag Haskell">Haskell</span>
+              <span class="tag Book">Book</span>
+            </div>
+        </div>
+    </div>
+    <article class="post">
+        <h1 id="learn-haskell-by-building-a-blog-generator">Learn Haskell by Building a Blog Generator</h1>
 <p>I have recently gone through <a href="http://lhbg-book.link" class="uri">http://lhbg-book.link</a> associated with <a href="https://github.com/soupi/learn-haskell-blog-generator" class="uri">https://github.com/soupi/learn-haskell-blog-generator</a>. It was an absolute pleasure. I will not go through it in detail, just mention a few things I stumbled upon.</p>
 <h2 id="applicative-introduction-and-type-catch-up">Applicative introduction and type catch-up</h2>
 <p>The applicative introduction in <a href="https://lhbg-book.link/05-glue/04-optparse.html" class="uri">https://lhbg-book.link/05-glue/04-optparse.html</a> was a well-guided leap. A small, but VERY important part, was the type listing along the way:</p>
@@ -58,43 +98,30 @@ cradle</code></pre>
 <h2 id="summary">Summary</h2>
 <p>I enjoyed the book a lot. Every once in a while it was necessary for me to write up a mind map to keep track of the different sections and I had a few issues on figuring out which file to place the code for the exercises in. Sometimes this was annoying, and at other times I considered it part of the challenge.</p>
 <p>Improvement potential for the book could be a better feel for how the pieces fit together, perhaps by more manual testing.</p>
-<p>Thanks for a great book with a good pace that I really enjoyed. Especially the section on fancy options parsing.</p>]]></content>
-  </entry>
-  <entry>
-      <title>Haskell Templates</title>
-      <link href="https://cthulehansen.github.io/blogposts/goal.html"/>
-      <id>https://cthulehansen.github.io/blogposts/goal.html</id>
-      <updated>2022-09-26T00:00:SZ</updated>
-      <category term="Haskell"/>
-      <category term="Book"/>
-      <summary>Templates for typical and necessary parts of an application</summary>
-      <content type="html"><![CDATA[<h1 id="current-goal-generate-templates-for-bits-and-pieces">Current goal: Generate templates for bits and pieces</h1>
-<p>My current goal of Haskell learning is to generate templates for different typical parts of an application:</p>
-<ul>
-<li>JSON/YAML parsing and writing</li>
-<li>Error Reporting including:
-<ul>
-<li>Logging to file</li>
-</ul></li>
-<li>Passing Environment</li>
-<li>State-handling</li>
-<li>CRUD</li>
-<li>Database access</li>
-<li>CLI options</li>
-<li>Testing</li>
-<li>Network Communication</li>
-<li>CI for Haskell</li>
-<li>My GHC options</li>
-</ul>]]></content>
-  </entry>
-  <entry>
-      <title>Sample Post</title>
-      <link href="https://cthulehansen.github.io/blogposts/sample-post.html"/>
-      <id>https://cthulehansen.github.io/blogposts/sample-post.html</id>
-      <updated>2019-01-01T00:00:SZ</updated>
-      <category term="slick"/>
-      <category term="site"/>
-      <summary>My first blog post using slick</summary>
-      <content type="html"><![CDATA[<p>Welcome to your first blog post!</p>]]></content>
-  </entry>
-</feed>
+<p>Thanks for a great book with a good pace that I really enjoyed. Especially the section on fancy options parsing.</p>
+
+        <br>
+        <br>
+
+        <!--Share buttons-->
+        <div class="social-buttons">
+            <a href="https://twitter.com/share" class="twitter-share-button"
+                                                data-url="https://cthulehansen.github.io/blog" data-text="Check out: Learn Haskell by Building a Blog Generator - " data-via="CThuleHansen">Tweet</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+            <a href="https://twitter.com/CThuleHansen" class="twitter-follow-button" data-show-count="false" data-dnt="true">Follow @CThuleHansen</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+            <div class="fb-like" data-href="" data-layout="button" data-action="like" data-show-faces="true" data-share="true"></div>
+        </div>
+</article>
+
+</div>
+
+<footer>
+    Built with Haskell using <a href="https://github.com/ChrisPenner/slick">slick</a> ❤️
+</footer>
+
+<link href='https://fonts.googleapis.com/css?family=Quicksand:300,400' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+<script src="/blog/js/main.js"></script>
+</body>
+</html>
