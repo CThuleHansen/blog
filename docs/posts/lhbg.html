@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head profile="http://www.w3.org/2005/10/profile">
+    <meta charset="UTF-8">
+    <meta name="description" content="Blog">
+    <meta name="author" content="Casper Thule">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@CThuleHansen">
+<meta name="twitter:creator" content="@CThuleHansen">
+<meta name="twitter:title" content="Learn Haskell by Building a Blog Generator">
+    <meta name="twitter:description" content="My impression of the book Learn Haskell by Building a Blog Generator">
+        <title>Learn Haskell by Building a Blog Generator</title>
+    <link rel="stylesheet" href="/blog/css/style.css">
+    <link rel="stylesheet" href="/blog/css/syntax.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a id="beacon" href="/">
+                <div id="home-text"> HOME </div>
+            </a>
+        </nav>
+    
+        <div class="right-sidebar">
+            <a class="ext-link" href="https://github.com/CThuleHansen">
+            <img src="/blog/images/github-logo.png" alt="Github Profile"/>
+        </a>
+
+            <a class="ext-link" href="https://twitter.com/CThuleHansen">
+            <img src="/blog/images/twitter-logo.png" alt="Twitter Profile"/>
+        </a>
+    <div id="theme-button">DAY</div>
+        </div>
+    </header>
+
+<div id="page">
+    <div class="wrapper">
+        <div class="masthead">
+            <span class="title">
+                Learn Haskell by Building a Blog Generator
+            </span>
+            <br>
+
+            <br>
+            <span class="byline">by Casper Thule</span>
+            <br>
+            <span class="date">Sep 26, 2022</span>
+            <br>
+            <div class="metadata">
+            </div>
+            <div class="tags">
+              <span class="tag Haskell">Haskell</span>
+              <span class="tag Book">Book</span>
+              <span class="tag Beginner">Beginner</span>
+              <span class="tag Options Parsing">Options Parsing</span>
+            </div>
+        </div>
+    </div>
+    <article class="post">
+        <p>I have recently gone through <a href="http://lhbg-book.link" class="uri">http://lhbg-book.link</a> associated with <a href="https://github.com/soupi/learn-haskell-blog-generator" class="uri">https://github.com/soupi/learn-haskell-blog-generator</a>. It was an absolute pleasure. I will not go through it in detail, just mention a few things I stumbled upon.</p>
+<h2 id="applicative-introduction-and-type-catch-up">Applicative introduction and type catch-up</h2>
+<p>The applicative introduction in <a href="https://lhbg-book.link/05-glue/04-optparse.html" class="uri">https://lhbg-book.link/05-glue/04-optparse.html</a> was a well-guided leap. A small, but VERY important part, was the type listing along the way:</p>
+<pre><code>pConvertSingle :: Parser Options
+
+pInputFile :: Parser SingleInput
+pOutputFile :: Parser SingleOutput
+
+ConvertSingle :: SingleInput -&gt; SingleOutput -&gt; Options
+
+(&lt;$&gt;) :: (a -&gt; b) -&gt; Parser a -&gt; Parser b
+  -- Specifically, here `a` is `SingleInput`
+  -- and `b` is `SingleOutput -&gt; Options`,
+
+ConvertSingle &lt;$&gt; pInputFile :: Parser (SingleOutput -&gt; Options)
+
+(&lt;*&gt;) :: Parser (a -&gt; b) -&gt; Parser a -&gt; Parser b
+  -- Specifically, here `a -&gt; b` is `SingleOutput -&gt; Options`
+  -- so `a` is `SingleOutput` and `b` is `Options`
+
+-- So we get:
+(ConvertSingle &lt;$&gt; pInputFile) &lt;*&gt; pOutputFile :: Parser Options</code></pre>
+<p>The reason why I so enjoyed the type catch-up is that functions inside a Parser is less intuitive than functions inside a list. For me, it is significantly more easy to relate to a list of functions, than a parser of <code>a -&gt; b</code>, as the parser does not parse functions. Instead, it is a parser that is still lacking an argument to parse what is desired. At this point it is important to "follow the types", which the type catch-up helped a lot in achieving.</p>
+<h2 id="missing-exercises">Missing exercises</h2>
+<p>I was looking forward to "Handling errors and multiple files" as I hoped to get to write the glue that connects Haskell to the outside world. Unfortunately, it was a lot of reading with very little coding from my part. I had hoped for some exercises (finally) in "Lets code already!", but this was unfortunately not the case. Up till this point, I have enjoyed the exercise-approach to learning, but this section did not follow this recipe.</p>
+<h2 id="fancy-options-parsing-section">Fancy Options Parsing Section</h2>
+<p>By coincidence I stumbled upon contributing to Cli library after going through this guide and I have visited the section called Fancy Options Parsing many times. It is well-described!</p>
+<h2 id="build-error">Build error</h2>
+<p>Upon creating a new module in <a href="https://lhbg-book.link/03-html/05-modules.html" class="uri">https://lhbg-book.link/03-html/05-modules.html</a> HLS presented the following error on <code>module Html</code>:</p>
+<pre><code>Multi Cradle: No prefixes matched
+pwd: /home/ctm/source/lhbd
+filepath: /home/ctm/source/lhbd/app/Html.hs
+prefixes:
+(&quot;app/Main.hs&quot;,Cabal {component = Just &quot;lhbd:exe:lhbd&quot;})
+cradle</code></pre>
+<p>I solved this by adding <code>other-modules: Html</code> to the related cabal file.</p>
+<p>Many of the guides suggests creating an hie.yaml file, e.g. <a href="https://github.com/haskell/haskell-language-server/issues/1215" class="uri">https://github.com/haskell/haskell-language-server/issues/1215</a> I did not attempt this, as it seemed strange that it should be necessary, thus I stuck to my solution above. Thus, I believe the reason is that there is not path from Main.hs to Html.hs. Once a path, e.g. via imports, exists, then this error does not occur.</p>
+<p>The book does not discuss creating a cabal file at this point, so following the book without doing manual stuff on the side would probably not present this error.</p>
+<h2 id="summary">Summary</h2>
+<p>I enjoyed the book a lot. Every once in a while it was necessary for me to write up a mind map to keep track of the different sections and I had a few issues on figuring out which file to place the code for the exercises in. Sometimes this was annoying, and at other times I considered it part of the challenge.</p>
+<p>Improvement potential for the book could be a better feel for how the pieces fit together, perhaps by more manual testing.</p>
+<p>Thanks for a great book with a good pace that I really enjoyed. Especially the section on fancy options parsing.</p>
+
+        <br>
+        <br>
+
+        <!--Share buttons-->
+        <div class="social-buttons">
+            <a href="https://twitter.com/share" class="twitter-share-button"
+                                                data-url="https://cthulehansen.github.io/blog" data-text="Check out: Learn Haskell by Building a Blog Generator - " data-via="CThuleHansen">Tweet</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+            <a href="https://twitter.com/CThuleHansen" class="twitter-follow-button" data-show-count="false" data-dnt="true">Follow @CThuleHansen</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+            <div class="fb-like" data-href="" data-layout="button" data-action="like" data-show-faces="true" data-share="true"></div>
+        </div>
+</article>
+
+</div>
+
+<footer>
+    Built with Haskell using <a href="https://github.com/ChrisPenner/slick">slick</a> ❤️
+</footer>
+
+<link href='https://fonts.googleapis.com/css?family=Quicksand:300,400' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+<script src="/blog/js/main.js"></script>
+</body>
+</html>

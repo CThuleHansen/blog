@@ -2,11 +2,10 @@
 title: "Learn Haskell by Building a Blog Generator"
 author: Casper Thule
 date: Sep 26, 2022
-tags: [Haskell, Book]
+tags: [Haskell, Book, Beginner, Options Parsing]
 description: My impression of the book Learn Haskell by Building a Blog Generator
 ---
 
-# Learn Haskell by Building a Blog Generator
 I have recently gone through http://lhbg-book.link associated with https://github.com/soupi/learn-haskell-blog-generator. It was an absolute pleasure. I will not go through it in detail, just mention a few things I stumbled upon.
 
 ## Applicative introduction and type catch-up

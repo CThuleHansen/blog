@@ -6,7 +6,6 @@ tags: [Haskell, Book]
 description: Templates for typical and necessary parts of an application
 ---
 
-# Current goal: Generate templates for bits and pieces
 My current goal of Haskell learning is to generate templates for different typical parts of an application:
 - JSON/YAML parsing and writing
 - Error Reporting including:

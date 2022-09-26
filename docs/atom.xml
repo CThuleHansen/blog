@@ -2,22 +2,50 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title>Blog</title>
     <link href="https://cthulehansen.github.io/blog/atom.xml" rel="self" type="application/rss+xml" />
-  <updated>2022-09-26T19:13:SZ</updated>
+  <updated>2022-09-26T19:17:SZ</updated>
   <author>
       <name>Casper Thule</name>
   </author>
   <id>https://cthulehansen.github.io/blog/</id>
 
   <entry>
-      <title>Learn Haskell by Building a Blog Generator</title>
-      <link href="https://cthulehansen.github.io/blogposts/bloggen.html"/>
-      <id>https://cthulehansen.github.io/blogposts/bloggen.html</id>
+      <title>Haskell Templates</title>
+      <link href="https://cthulehansen.github.io/blogposts/goal.html"/>
+      <id>https://cthulehansen.github.io/blogposts/goal.html</id>
       <updated>2022-09-26T00:00:SZ</updated>
       <category term="Haskell"/>
       <category term="Book"/>
+      <summary>Templates for typical and necessary parts of an application</summary>
+      <content type="html"><![CDATA[<h1 id="current-goal-generate-templates-for-bits-and-pieces">Current goal: Generate templates for bits and pieces</h1>
+<p>My current goal of Haskell learning is to generate templates for different typical parts of an application:</p>
+<ul>
+<li>JSON/YAML parsing and writing</li>
+<li>Error Reporting including:
+<ul>
+<li>Logging to file</li>
+</ul></li>
+<li>Passing Environment</li>
+<li>State-handling</li>
+<li>CRUD</li>
+<li>Database access</li>
+<li>CLI options</li>
+<li>Testing</li>
+<li>Network Communication</li>
+<li>CI for Haskell</li>
+<li>My GHC options</li>
+</ul>]]></content>
+  </entry>
+  <entry>
+      <title>Learn Haskell by Building a Blog Generator</title>
+      <link href="https://cthulehansen.github.io/blogposts/lhbg.html"/>
+      <id>https://cthulehansen.github.io/blogposts/lhbg.html</id>
+      <updated>2022-09-26T00:00:SZ</updated>
+      <category term="Haskell"/>
+      <category term="Book"/>
+      <category term="Beginner"/>
+      <category term="Options Parsing"/>
       <summary>My impression of the book Learn Haskell by Building a Blog Generator</summary>
-      <content type="html"><![CDATA[<h1 id="learn-haskell-by-building-a-blog-generator">Learn Haskell by Building a Blog Generator</h1>
-<p>I have recently gone through <a href="http://lhbg-book.link" class="uri">http://lhbg-book.link</a> associated with <a href="https://github.com/soupi/learn-haskell-blog-generator" class="uri">https://github.com/soupi/learn-haskell-blog-generator</a>. It was an absolute pleasure. I will not go through it in detail, just mention a few things I stumbled upon.</p>
+      <content type="html"><![CDATA[<p>I have recently gone through <a href="http://lhbg-book.link" class="uri">http://lhbg-book.link</a> associated with <a href="https://github.com/soupi/learn-haskell-blog-generator" class="uri">https://github.com/soupi/learn-haskell-blog-generator</a>. It was an absolute pleasure. I will not go through it in detail, just mention a few things I stumbled upon.</p>
 <h2 id="applicative-introduction-and-type-catch-up">Applicative introduction and type catch-up</h2>
 <p>The applicative introduction in <a href="https://lhbg-book.link/05-glue/04-optparse.html" class="uri">https://lhbg-book.link/05-glue/04-optparse.html</a> was a well-guided leap. A small, but VERY important part, was the type listing along the way:</p>
 <pre><code>pConvertSingle :: Parser Options
@@ -59,33 +87,6 @@ cradle</code></pre>
 <p>I enjoyed the book a lot. Every once in a while it was necessary for me to write up a mind map to keep track of the different sections and I had a few issues on figuring out which file to place the code for the exercises in. Sometimes this was annoying, and at other times I considered it part of the challenge.</p>
 <p>Improvement potential for the book could be a better feel for how the pieces fit together, perhaps by more manual testing.</p>
 <p>Thanks for a great book with a good pace that I really enjoyed. Especially the section on fancy options parsing.</p>]]></content>
-  </entry>
-  <entry>
-      <title>Haskell Templates</title>
-      <link href="https://cthulehansen.github.io/blogposts/goal.html"/>
-      <id>https://cthulehansen.github.io/blogposts/goal.html</id>
-      <updated>2022-09-26T00:00:SZ</updated>
-      <category term="Haskell"/>
-      <category term="Book"/>
-      <summary>Templates for typical and necessary parts of an application</summary>
-      <content type="html"><![CDATA[<h1 id="current-goal-generate-templates-for-bits-and-pieces">Current goal: Generate templates for bits and pieces</h1>
-<p>My current goal of Haskell learning is to generate templates for different typical parts of an application:</p>
-<ul>
-<li>JSON/YAML parsing and writing</li>
-<li>Error Reporting including:
-<ul>
-<li>Logging to file</li>
-</ul></li>
-<li>Passing Environment</li>
-<li>State-handling</li>
-<li>CRUD</li>
-<li>Database access</li>
-<li>CLI options</li>
-<li>Testing</li>
-<li>Network Communication</li>
-<li>CI for Haskell</li>
-<li>My GHC options</li>
-</ul>]]></content>
   </entry>
   <entry>
       <title>Sample Post</title>
