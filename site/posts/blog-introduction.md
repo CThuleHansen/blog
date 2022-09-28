@@ -10,8 +10,8 @@ Finally I got around to starting a blog. I have been wanting to do this for ages
 This will mainly concern Haskell but might delve into other areas related to programming that I find interesting.
 
 A brief recap of my Haskell Journey:
-I first encountered Haskell during my Masters in software engineering. It interested me a lot, probably because of they clear correspondence to theory and the alternative way of writing software when coming from a regular C#/C++ OO approach.
-But the main reasons were, and still are: It presents a challenge, and I love the idea of making illegal states unrepresentable.
+I first encountered Haskell during my Masters in software engineering. It interested me a lot, probably because of the clear correspondence to theory and the alternative way of writing software when coming from a regular C#/C++ OO-approach.
+But the main reasons were (and still are): It presents a challenge, and I love the idea of making illegal states unrepresentable.
 
 I touched Haskell a bit back then, and then started my PhD, where I did not touch much Haskell. In the end I got around to writing a small backend for website along with a frontend in Elm. Then my progress stalled again, and now I finally got around to doing a bit of Haskell on the side. It is however difficult to find time, as I now have three children < 6 years old.
 
