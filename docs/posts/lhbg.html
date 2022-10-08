@@ -8,9 +8,9 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@CThuleHansen">
 <meta name="twitter:creator" content="@CThuleHansen">
-<meta name="twitter:title" content="Learn Haskell by Building a Blog Generator">
+<meta name="twitter:title" content="Learn Haskell by Building a Blog Generator - UPDATED">
     <meta name="twitter:description" content="My impression of the book Learn Haskell by Building a Blog Generator">
-        <title>Learn Haskell by Building a Blog Generator</title>
+        <title>Learn Haskell by Building a Blog Generator - UPDATED</title>
     <link rel="stylesheet" href="/blog/css/style.css">
     <link rel="stylesheet" href="/blog/css/syntax.css">
 </head>
@@ -38,7 +38,7 @@
     <div class="wrapper">
         <div class="masthead">
             <span class="title">
-                Learn Haskell by Building a Blog Generator
+                Learn Haskell by Building a Blog Generator - UPDATED
             </span>
             <br>
 
@@ -58,7 +58,8 @@
         </div>
     </div>
     <article class="post">
-        <p>I have recently gone through <a href="http://lhbg-book.link" class="uri">http://lhbg-book.link</a> associated with <a href="https://github.com/soupi/learn-haskell-blog-generator" class="uri">https://github.com/soupi/learn-haskell-blog-generator</a>. It was an absolute pleasure. I will not go through it in detail, just mention a few things I stumbled upon.</p>
+        <p><strong>Update: I sent this blog post to the author, and received a great response. This has led to an update of the section called "Missing Exercises" as the author has improved the chapter in question. Thanks for this.</strong></p>
+<p>I have recently gone through <a href="http://lhbg-book.link" class="uri">http://lhbg-book.link</a> associated with <a href="https://github.com/soupi/learn-haskell-blog-generator" class="uri">https://github.com/soupi/learn-haskell-blog-generator</a>. It was an absolute pleasure. I will not go through it in detail, just mention a few things I stumbled upon.</p>
 <h2 id="applicative-introduction-and-type-catch-up">Applicative introduction and type catch-up</h2>
 <p>The applicative introduction in <a href="https://lhbg-book.link/05-glue/04-optparse.html" class="uri">https://lhbg-book.link/05-glue/04-optparse.html</a> was a well-guided leap. A small, but VERY important part, was the type listing along the way:</p>
 <pre><code>pConvertSingle :: Parser Options
@@ -83,6 +84,7 @@ ConvertSingle &lt;$&gt; pInputFile :: Parser (SingleOutput -&gt; Options)
 <p>The reason why I so enjoyed the type catch-up is that functions inside a Parser is less intuitive than functions inside a list. For me, it is significantly more easy to relate to a list of functions, than a parser of <code>a -&gt; b</code>, as the parser does not parse functions. Instead, it is a parser that is still lacking an argument to parse what is desired. At this point it is important to "follow the types", which the type catch-up helped a lot in achieving.</p>
 <h2 id="missing-exercises">Missing exercises</h2>
 <p>I was looking forward to "Handling errors and multiple files" as I hoped to get to write the glue that connects Haskell to the outside world. Unfortunately, it was a lot of reading with very little coding from my part. I had hoped for some exercises (finally) in "Lets code already!", but this was unfortunately not the case. Up till this point, I have enjoyed the exercise-approach to learning, but this section did not follow this recipe.</p>
+<p><strong>UPDATE</strong> My comments were heard (<a href="https://twitter.com/_gilmi/status/1574664800327454720?s=20&amp;t=BGGQKuId1x1kRh20bpHMBg" class="uri">https://twitter.com/_gilmi/status/1574664800327454720?s=20&amp;t=BGGQKuId1x1kRh20bpHMBg</a>) and the author has now added exercises! Among other things, I am now aware of <a href="https://hackage.haskell.org/package/base-4.15.0.0/docs/Control-Exception.html#v:bracket">bracket</a>.</p>
 <h2 id="fancy-options-parsing-section">Fancy Options Parsing Section</h2>
 <p>By coincidence I stumbled upon contributing to Cli library after going through this guide and I have visited the section called Fancy Options Parsing many times. It is well-described!</p>
 <h2 id="build-error">Build error</h2>
@@ -107,7 +109,7 @@ cradle</code></pre>
         <!--Share buttons-->
         <div class="social-buttons">
             <a href="https://twitter.com/share" class="twitter-share-button"
-                                                data-url="https://cthulehansen.github.io/blog" data-text="Check out: Learn Haskell by Building a Blog Generator - " data-via="CThuleHansen">Tweet</a>
+                                                data-url="https://cthulehansen.github.io/blog" data-text="Check out: Learn Haskell by Building a Blog Generator - UPDATED - " data-via="CThuleHansen">Tweet</a>
             <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
             <a href="https://twitter.com/CThuleHansen" class="twitter-follow-button" data-show-count="false" data-dnt="true">Follow @CThuleHansen</a>
             <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>

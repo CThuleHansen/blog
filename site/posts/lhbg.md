@@ -1,12 +1,15 @@
 ---
-title: "Learn Haskell by Building a Blog Generator"
+title: "Learn Haskell by Building a Blog Generator - UPDATED"
 author: Casper Thule
 date: Sep 26, 2022
 tags: [Haskell, Book, Beginner, Options Parsing]
 description: My impression of the book Learn Haskell by Building a Blog Generator
 ---
 
+**Update: I sent this blog post to the author, and received a great response. This has led to an update of the section called "Missing Exercises" as the author has improved the chapter in question. Thanks for this.**
+
 I have recently gone through http://lhbg-book.link associated with https://github.com/soupi/learn-haskell-blog-generator. It was an absolute pleasure. I will not go through it in detail, just mention a few things I stumbled upon.
+
 
 ## Applicative introduction and type catch-up
 The applicative introduction in https://lhbg-book.link/05-glue/04-optparse.html was a well-guided leap. A small, but VERY important part, was the type listing along the way:
@@ -38,6 +41,8 @@ The reason why I so enjoyed the type catch-up is that functions inside a Parser 
 I was looking forward to "Handling errors and multiple files" as I hoped to get to write the glue that connects Haskell to the outside world.
 Unfortunately, it was a lot of reading with very little coding from my part. I had hoped for some exercises (finally) in "Lets code already!", but this was unfortunately not the case. 
 Up till this point, I have enjoyed the exercise-approach to learning, but this section did not follow this recipe. 
+
+**UPDATE** My comments were heard (https://twitter.com/_gilmi/status/1574664800327454720?s=20&t=BGGQKuId1x1kRh20bpHMBg) and the author has now added exercises! Among other things, I am now aware of [bracket](https://hackage.haskell.org/package/base-4.15.0.0/docs/Control-Exception.html#v:bracket).
 
 ## Fancy Options Parsing Section
 By coincidence I stumbled upon contributing to Cli library after going through this guide and I have visited the section called Fancy Options Parsing many times. It is well-described!
