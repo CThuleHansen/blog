@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title>Blog</title>
     <link href="https://cthulehansen.github.io/blog/atom.xml" rel="self" type="application/rss+xml" />
-  <updated>2022-10-08T19:42:SZ</updated>
+  <updated>2022-10-08T20:16:SZ</updated>
   <author>
       <name>Casper Thule</name>
   </author>
@@ -20,32 +20,6 @@
 <p>I touched Haskell a bit back then, and then started my PhD, where I did not touch much Haskell. In the end I got around to writing a small backend for website along with a frontend in Elm. Then my progress stalled again, and now I finally got around to doing a bit of Haskell on the side. It is however difficult to find time, as I now have three children &lt; 6 years old.</p>
 <p>During the long on/off period I touched upon different blogs, books, exercises and so forth, but it does not motivate me as much anymore. Instead, I was hoping to contribute to some sort of open-source tooling that would accept my unstable contributions and help me get into non-toy-example Haskell. I reached out to Dmitrii Kovanikov (<a href="https://twitter.com/ChShersh" class="uri">https://twitter.com/ChShersh</a>) and he was very welcoming (Thank you!) and had the perfect fit for my interests: Iris (<a href="https://github.com/chshersh/iris" class="uri">https://github.com/chshersh/iris</a>). Hopefully my first pull-request will be merged in soon after several rounds of massaging.</p>
 <p>I hope to frequently find the time to write some posts and who knows, I might one day be able to introduce Haskell in my job as well.</p>]]></content>
-  </entry>
-  <entry>
-      <title>Haskell Templates</title>
-      <link href="https://cthulehansen.github.io/blogposts/goal.html"/>
-      <id>https://cthulehansen.github.io/blogposts/goal.html</id>
-      <updated>2022-09-26T00:00:SZ</updated>
-      <category term="Haskell"/>
-      <category term="Book"/>
-      <summary>Templates for typical and necessary parts of an application</summary>
-      <content type="html"><![CDATA[<p>My current goal of Haskell learning is to generate templates for different typical parts of an application:</p>
-<ul>
-<li>JSON/YAML parsing and writing</li>
-<li>Error Reporting including:
-<ul>
-<li>Logging to file</li>
-</ul></li>
-<li>Passing Environment</li>
-<li>State-handling</li>
-<li>CRUD</li>
-<li>Database access</li>
-<li>CLI options</li>
-<li>Testing</li>
-<li>Network Communication</li>
-<li>CI for Haskell</li>
-<li>My GHC options</li>
-</ul>]]></content>
   </entry>
   <entry>
       <title>Learn Haskell by Building a Blog Generator - UPDATED</title>
@@ -101,5 +75,32 @@ cradle</code></pre>
 <p>I enjoyed the book a lot. Every once in a while it was necessary for me to write up a mind map to keep track of the different sections and I had a few issues on figuring out which file to place the code for the exercises in. Sometimes this was annoying, and at other times I considered it part of the challenge.</p>
 <p>Improvement potential for the book could be a better feel for how the pieces fit together, perhaps by more manual testing.</p>
 <p>Thanks for a great book with a good pace that I really enjoyed. Especially the section on fancy options parsing.</p>]]></content>
+  </entry>
+  <entry>
+      <title>Haskell Templates</title>
+      <link href="https://cthulehansen.github.io/blogposts/templates.html"/>
+      <id>https://cthulehansen.github.io/blogposts/templates.html</id>
+      <updated>2022-09-26T00:00:SZ</updated>
+      <category term="Haskell"/>
+      <category term="Book"/>
+      <summary>Templates for typical and necessary parts of an application</summary>
+      <content type="html"><![CDATA[<p>My current goal of Haskell learning is to generate templates for different typical parts of an application:</p>
+<ul>
+<li>JSON/YAML parsing and writing</li>
+<li>Error Reporting including:
+<ul>
+<li>Logging to file</li>
+</ul></li>
+<li>Passing Environment</li>
+<li>State-handling</li>
+<li>CRUD</li>
+<li>Database access</li>
+<li>CLI options</li>
+<li>Testing</li>
+<li>Network Communication</li>
+<li>CI for Haskell</li>
+<li>My GHC options</li>
+<li>Something with concurrency. Ideas?</li>
+</ul>]]></content>
   </entry>
 </feed>

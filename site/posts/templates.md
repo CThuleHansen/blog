@@ -19,3 +19,4 @@ My current goal of Haskell learning is to generate templates for different typic
 - Network Communication
 - CI for Haskell
 - My GHC options
+- Something with concurrency. Ideas?
