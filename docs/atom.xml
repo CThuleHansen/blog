@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title>Blog</title>
     <link href="https://cthulehansen.github.io/blog/atom.xml" rel="self" type="application/rss+xml" />
-  <updated>2022-10-08T20:16:SZ</updated>
+  <updated>2022-11-05T21:42:SZ</updated>
   <author>
       <name>Casper Thule</name>
   </author>
@@ -20,6 +20,26 @@
 <p>I touched Haskell a bit back then, and then started my PhD, where I did not touch much Haskell. In the end I got around to writing a small backend for website along with a frontend in Elm. Then my progress stalled again, and now I finally got around to doing a bit of Haskell on the side. It is however difficult to find time, as I now have three children &lt; 6 years old.</p>
 <p>During the long on/off period I touched upon different blogs, books, exercises and so forth, but it does not motivate me as much anymore. Instead, I was hoping to contribute to some sort of open-source tooling that would accept my unstable contributions and help me get into non-toy-example Haskell. I reached out to Dmitrii Kovanikov (<a href="https://twitter.com/ChShersh" class="uri">https://twitter.com/ChShersh</a>) and he was very welcoming (Thank you!) and had the perfect fit for my interests: Iris (<a href="https://github.com/chshersh/iris" class="uri">https://github.com/chshersh/iris</a>). Hopefully my first pull-request will be merged in soon after several rounds of massaging.</p>
 <p>I hope to frequently find the time to write some posts and who knows, I might one day be able to introduce Haskell in my job as well.</p>]]></content>
+  </entry>
+  <entry>
+      <title>JSON YAML Parsing - Just why?</title>
+      <link href="https://cthulehansen.github.io/blogposts/jsonyaml.html"/>
+      <id>https://cthulehansen.github.io/blogposts/jsonyaml.html</id>
+      <updated>2022-11-05T00:00:SZ</updated>
+      <category term="Haskell"/>
+      <summary>Trying JSON/YAML parsing in Haskell</summary>
+      <content type="html"><![CDATA[<p>I might have touched upon one of the Haskell things that seem unnecessarily complex - apparently JSON and YAML decoding has to quite different type signatures.</p>
+<p>For JSON parsing I am using aeson (<a href="https://hackage.haskell.org/package/aeson" class="uri">https://hackage.haskell.org/package/aeson</a>), more specifically this function:</p>
+<p><code>eitherDecode :: FromJSON a =&gt; ByteString -&gt; Either String a</code></p>
+<p>For YAML parsing I am using yaml (<a href="https://hackage.haskell.org/package/yaml" class="uri">https://hackage.haskell.org/package/yaml</a>), more specifically this function:</p>
+<p><code>decodeEither' :: FromJSON a =&gt; ByteString -&gt; Either ParseException a</code></p>
+<p>As it can be seen from the type signatures above, it is necessary to perform some handling of the <code>Left</code> case due to the difference in String vs ParseException. Furthermore, the <code>ByteString</code> also differ between the two. Aeson uses <code>Data.ByteString.Lazy</code> whereas yaml uses <code>Data.ByteString.Lazy</code>. This can easily be fixed though, by using <code>Data.Aeson.eitherDecodeStrict</code> instead.</p>
+<p>Thus, I ended up with a wrapper:</p>
+<pre><code>yamlDecode :: FromJSON a =&gt; Data.ByteString.ByteString -&gt;  Either String a
+yamlDecode a = case Data.Yaml.decodeEither&#39; a of  
+  Left pe -&gt; Left $ show pe
+  Right a&#39; -&gt; Right a&#39;</code></pre>
+<p>Cases such as this one are exactly the reason why I am creating these sort of templates - to familiarize myself with the ecosystem.</p>]]></content>
   </entry>
   <entry>
       <title>Learn Haskell by Building a Blog Generator - UPDATED</title>
